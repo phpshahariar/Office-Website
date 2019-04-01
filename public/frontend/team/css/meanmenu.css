@@ -1,0 +1,525 @@
+
+/*! #######################################################################
+
+	MeanMenu 2.0.7
+	--------
+
+	To be used with jquery.meanmenu.js by Chris Wharton (http://www.meanthemes.com/plugins/meanmenu/)
+
+####################################################################### */
+
+/* hide the link until viewport size is reached */
+a.meanmenu-reveal {
+	display: none;
+}
+
+/* when under viewport size, .mean-container is added to body */
+.mean-container .mean-bar {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  float: left;
+  position: relative;
+  width: 100%;
+  z-index: 99;
+}
+
+.mean-container a.meanmenu-reveal {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1px;
+    font-weight: 700;
+    height: 29px;
+    line-height: 22px;
+    margin-top: -82px;
+    padding: 8px 9px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 0;
+    width: 33px;
+	font-size:25px !important;
+}
+.mean-container a.meanmenu-reveal span {
+  background: #fff none repeat scroll 0 0;
+  display: block;
+  height: 3px;
+  margin-top: 5px;
+}
+
+.mean-container .mean-nav {
+  background: #fff none repeat scroll 0 0;
+  float: left;
+  margin-top: 18px;
+  width: 100%;
+}
+
+.mean-container .mean-nav ul {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	list-style-type: none;
+}
+
+.mean-container .mean-nav ul li {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.mean-container .mean-nav ul li a {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  color: #575757;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 10px 5%;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 90%;
+}
+
+.mean-container .mean-nav ul li li a {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  opacity: 0.75;
+  padding: 10px 10%;
+  text-shadow: none;
+  visibility: visible;
+  width: 80%;
+}
+
+.mean-container .mean-nav ul li.mean-last a {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.mean-container .mean-nav ul li li li a {
+	width: 70%;
+	padding: 1em 15%;
+}
+
+.mean-container .mean-nav ul li li li li a {
+	width: 60%;
+	padding: 1em 20%;
+}
+
+.mean-container .mean-nav ul li li li li li a {
+	width: 50%;
+	padding: 1em 25%;
+}
+
+.mean-container .mean-nav ul li a:hover {
+	background: #252525;
+	background: rgba(255,255,255,0.1);
+}
+
+.mean-container .mean-nav ul li a.mean-expand {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: rgba(255, 255, 255, 0.1) none repeat scroll 0 0;
+  border-color: currentcolor currentcolor rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.4);
+  border-image: none;
+  border-style: none none solid solid;
+  border-width: medium medium 1px 1px;
+  font-weight: 700;
+  height: 27px;
+  margin-top: 1px;
+  padding: 8px 12px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 26px;
+  z-index: 2;
+}
+
+.mean-container .mean-nav ul li a.mean-expand:hover {
+	background: rgba(0,0,0,0.9);
+}
+
+.mean-container .mean-push {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+.mean-nav .wrapper {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+/* Fix for box sizing on Foundation Framework etc. */
+.mean-container .mean-bar, .mean-container .mean-bar * {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+
+.mean-remove {
+	display: none !important;
+}
+
+
+
+
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+/* 2 header */
+.header-transparent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	transition: .4s;
+}
+.sticky {
+	left: 0;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow: 0 0 60px 0 rgba(0, 0, 0, .07);
+	z-index: 9999;
+	background: #fff;
+	-webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+   -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+}
+.white-header .sticky {background:#1e1465;}
+.header-area {
+	padding: 10px 0;
+}
+.header-wrapper{}
+.header-left{}
+.header-icon {
+	float: left;
+	margin-right: 8px;
+}
+.header2-left {
+	float: left;
+}
+.header-icon span {
+	color: #fff;
+	font-size: 14px;
+	top: 2px;
+	position: relative;
+}
+.header-text {
+	float: left;
+	padding-right: 30px;
+}
+.header-leftt:first-child{padding-right:0;}
+.header-text span {
+	color: #fff;
+	font-size: 14px;
+}
+.header-right-wrapper {
+	float: right;
+}
+.header-right-text {
+	float: left;
+}
+.header-right-text li {
+	display: inline-block;
+	position: relative;
+}
+.header-right-text li a {
+	color: #fff;
+	transition: all 0.3s ease 0s;
+	font-size: 14px;
+	font-weight: 400;
+}
+.header-right-text li::after {
+	color: #c9c9c9;
+	content: "/";
+	display: inline-block;
+	float: right;
+	font-size: 14px;
+	position: relative;
+	right: -2px;
+	top: 3px;
+}
+.header-right-text li:last-child::after{display:none;}
+.header-top-icon {
+	float: right;
+	margin-left: 48px;
+	position: relative;
+}
+.header-top-icon::before {
+	position: absolute;
+	content: "";
+	height: 20px;
+	width: 2px;
+	background: #4d4d4d;
+	left: -26px;
+	top: 4px;
+}
+.header-top-icon a {
+	font-size: 12px;
+	color: #fff;
+	margin-right: 10px;
+	transition: .3s;
+}
+.white-header .header-area {background:none;padding:0;}
+.header-border {
+	border-bottom: 1px solid #515c7e;
+	padding: 15px 0 15px 0;
+}
+.white-header .header-top-icon::before {
+	background: #c9c9c9;
+}
+.white-header{}
+.header-top-icon a:hover{opacity: .7}
+.header-top-icon a:last-child{margin-right:0;}
+.header-right {
+	margin-top: 24px;
+}
+.header-right .cart-bar {
+	position: relative;
+	margin-right: 54px;
+}
+.header-right .cart-bar::before {
+	position: absolute;
+	height: 20px;
+	width: 2px;
+	content: "";
+	background: #cccccc;
+	right: -29px;
+	top: 3px;
+}
+.header-right ul {
+	float: right;
+	margin-top: 12px;
+}
+.header-right li {
+  display: inline-block;
+}
+.header-right ul li a {
+	color: #333333;
+	font-size: 18px;
+}
+.header-right ul li a:hover{color: #3484a9;}
+.white-header .header-right ul li a {
+	color: #fff;
+}
+.white-header .header-right ul li a:hover{color: #3484a9;}
+.header-right li {
+	display: inline-block;
+	margin-right: 25px;
+	position: relative;
+	padding-bottom: 12px;
+}
+.header-right li:last-child{margin-right:0;}
+.search-form {}
+
+.main-menu  ul {
+	margin-bottom:0px;
+	padding:0;
+}
+ul.menu-wrap1.clearfix {
+    margin-bottom: 0;
+}
+
+.main-menu nav > ul  > li {
+	display: inline-block;
+	position: relative;
+}
+.main-menu ul li:last-child a{padding-right:0}
+.main-menu ul li:first-child a{padding-left:0}
+.shrink .main-menu ul li:first-child a{padding-left:0}
+.main-menu nav > ul > li > a {
+	color: #fff;
+	display: block;
+	font-size: 15px;
+	font-weight: 400;
+	padding: 50px 18px;
+	letter-spacing:0.5px;
+	text-transform: capitalize;
+	transition: all 0.3s ease 0s;
+	background: transparent;
+	line-height: 1;
+}
+.main-menu nav > ul > li:hover > a, .main-menu nav > ul > li.active > a {
+    color: #fea644;
+	text-decoration:none;
+}
+.main-menu nav > ul > li.new{position:relative;}
+.main-menu nav > ul > li.new::before {
+	position: absolute;
+	content: "new";
+	width: 50px;
+	height: 20px;
+	background: #3484a9;
+	top: 16px;
+	color: #fff;
+	right: -18px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: capitalize;
+	font-size: 14px;
+	border-radius: 3px;
+	z-index: 99;
+	font-weight: 700;
+}
+.white-header .main-menu nav > ul > li > a {
+	color: #fff;
+}
+.white-header .main-menu nav > ul > li:hover > a, .main-menu nav > ul > li.active > a {
+    color: #fea644;
+    text-decoration: none;
+    opacity: 0.8;
+}
+/* sub-menu */
+.main-menu nav > ul  > li .sub-menu {
+  background: #ffffff none repeat scroll 0 0;
+  border-top: 3px solid #3484a9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 120%;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  width: 220px;
+  z-index: 9;
+}
+.main-menu nav > ul  > li:hover .sub-menu{opacity:1;top:100%;visibility:visible}
+.main-menu nav > ul  > li .sub-menu li{display:block}
+.main-menu nav > ul > li .sub-menu li a {
+	color: #666666;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0;
+	padding: 13px 20px;
+	text-transform: capitalize;
+	display: block;
+}
+.main-menu nav > ul  > li:hover > .sub-menu li > a:hover{color:#fff;background:#3484a9;}
+/* extra info */

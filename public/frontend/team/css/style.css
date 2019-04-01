@@ -1,0 +1,111 @@
+.team{
+	margin-top:50px;
+}
+.team_member {
+	width: 160px !important;
+    height: 160px;
+    margin-right: 0px;
+    margin-left: 0px;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all .6s ease-in;
+    vertical-align: middle;
+    background: #fff;
+    padding: 5px;
+	 margin:auto;
+}
+.team_box {
+	padding: 30px 30px 30px 30px;
+	box-shadow: 1px 1px 6px 0px rgba(215, 215, 215, 0.75);
+	transition: all ease 0.5s 0s;
+	text-align:center;
+}
+.team_box:hover .team_member {
+    width: 160px !important;
+    height: 160px;
+    margin-right: 0px;
+    margin-left: 0px;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all .6s ease-in;
+    vertical-align: middle;
+    background: rgba(254,209,86,1);
+	background: -moz-linear-gradient(top, rgba(254,209,86,1) 0%, rgba(255,168,68,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(254,209,86,1)), color-stop(100%, rgba(255,168,68,1)));
+	background: -webkit-linear-gradient(top, rgba(254,209,86,1) 0%, rgba(255,168,68,1) 100%);
+	background: -o-linear-gradient(top, rgba(254,209,86,1) 0%, rgba(255,168,68,1) 100%);
+	background: -ms-linear-gradient(top, rgba(254,209,86,1) 0%, rgba(255,168,68,1) 100%);
+	background: linear-gradient(to bottom, rgba(254,209,86,1) 0%, rgba(255,168,68,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fed156', endColorstr='#ffa844', GradientType=0 );
+    padding: 5px;
+	margin:auto;
+}
+.team_box:hover {
+    box-shadow: 0px 6px 15px 0px rgba(185, 183, 183, 0.75); 
+    transition:all ease 0.5s 0s;
+}
+.team_box:hover i.fa.fa-dribbble{
+	color:#ec407a;
+	transition:all ease 0.5s 0s;
+}
+.team_box:hover i.fa.fa-facebook{
+	color:#385c8e;
+	transition:all ease 0.5s 0s;
+}
+.team_box:hover i.fa.fa-twitter{
+	color:#1ab1f5;
+	transition:all ease 0.5s 0s;
+}
+.team_box:hover i.fa.fa-google-plus{
+	color:#f4473a;
+	transition:all ease 0.5s 0s;
+}
+.team_box h2{
+	font-size:20px;
+	color:#2a3032;
+	text-align:center;
+	margin-top:30px;
+	font-weight:600;
+}
+.team_box h4{
+	font-size:13px;
+	color:#899295;
+	text-align:center;
+	letter-spacing:0.5px;
+}
+.team_box p{
+	font-size:15px;
+	color:#6a6f71;
+	margin-top:15px;
+	text-align:center;
+	line-height:26px;
+	letter-spacing:0.5px;
+}
+.social {
+  text-align: center;
+  list-style: none;
+  padding:0;
+  margin-bottom:0px;
+}
+.social li {
+  display: inline;
+  margin:5px;
+}
+.social a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #5c6164;
+  font-variant: small-caps;
+}
+#slider .owl-nav{
+	display:none;
+}
+#slider .item {
+    margin: 30px 15px 15px 15px;
+}
+#slider .owl-dots {
+    margin-top: 20px;
+}
