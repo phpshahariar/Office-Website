@@ -78,8 +78,43 @@
                 </div>
             </div>
         </div>
-
         <!-- Area Chart Example-->
-
+    </div>
+<hr/>
+    <div class="container">
+        <div class="alert" id="message" style="display: none"></div>
+        <div class="card mb-3">
+            <div class="card-header">
+                <i class="fas fa-table"></i>
+                Customer Mail</div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th style="width: 250px;">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td style="width: 220px;">
+                                    <a href="#" name="btn" class="btn btn-sm btn-outline-danger" onclick="return confirm('Are You Sure! You Want To Delete This ?');" title="Delete">
+                                        <i class="fas fa-trash"> Delete</i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     @endsection

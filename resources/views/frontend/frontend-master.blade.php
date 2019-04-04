@@ -56,6 +56,8 @@
 <!-- BEGIN VENDOR CSS-->
     <!-- END Custom CSS-->
 
+    <link rel="stylesheet" href="{!! asset('/frontend/') !!}/portfolio/css/style.css" type="text/css" media="all" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
    {{--[if lt IE 9]--}}

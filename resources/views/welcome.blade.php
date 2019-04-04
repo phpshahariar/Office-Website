@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Banglakings Software Ltd.
                 </div>
 
                 <div class="links">

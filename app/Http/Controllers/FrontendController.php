@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\About;
 use App\Contact;
+use App\Frontend;
 use App\Logo;
 use App\Team;
 use App\Work;
@@ -24,5 +25,14 @@ class FrontendController extends Controller
             'all_member' => $all_member,
             'contact_us' => $contact_us
         ]);
+    }
+
+    public function sent_mail(Request $request){
+        $send_mail = new Frontend();
+        $send_mail->name = $request->name;
+        $send_mail->email = $request->email;
+        $send_mail->message = $request->message;
+        $send_mail->save();
+        return redirect()->back()->with('message', 'Your Mail Has been send');
     }
 }

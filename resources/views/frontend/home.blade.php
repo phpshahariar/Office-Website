@@ -11,7 +11,9 @@
         </div>
         @endforeach
     </header>
-
+{{--    @if(Session::get('message'))--}}
+{{--        <p class="alert alert-success"><h4>{!! Session::get('message') !!}</h4></p>--}}
+{{--    @endif--}}
     <div id="st-nav">
         <a href="#0" class="st-nav-trigger">
             Menu<span></span>
@@ -23,7 +25,7 @@
                     <a class="page-scroll hvr-underline-from-center" href="#page-top" style="font-size: 15px;">Home</a>
                 </li>
                 <li>
-                    <a class="page-scroll hvr-underline-from-center" href="#our-work" style="font-size: 15px;">Our Work</a>
+                    <a class="page-scroll hvr-underline-from-center" href="#our-work" style="font-size: 15px;">Portfolio</a>
                 </li>
                 <li>
                     <a class="page-scroll hvr-underline-from-center" href="#about" style="font-size: 15px;">About Us</a>
@@ -32,7 +34,7 @@
                     <a class="page-scroll hvr-underline-from-center" href="#services" style="font-size: 15px;">Services</a>
                 </li>
                 <li>
-                    <a class="page-scroll hvr-underline-from-center" href="#portfolio" style="font-size: 15px;">Portfolio</a>
+                    <a class="page-scroll hvr-underline-from-center" href="{!! url('/demo') !!}" style="font-size: 15px;">Demo</a>
                 </li>
                 <li>
                     <a class="page-scroll hvr-underline-from-center" href="#skills" style="font-size: 15px;">Our Skills</a>
@@ -70,8 +72,8 @@
                     </span>
                     </div>
                     <!-- /.headlines-wrapper -->
-                    <h3 class="first-headline">Ultimate Software Solution!</h3>
-                    <h3 class="second-headline">Welcome to <span class="primary" style="color: orangered;">Banglaking Software</span> by Banglaking</h3>
+                    <h3 class="first-headline">Welcome to <span class="primary" style="color: orangered;">Banglaking Software Ltd</span></h3>
+                    <h3 class="second-headline">Ultimate Software Solution</h3>
                 </div>
             </div>
         </div>
@@ -110,8 +112,10 @@
                     <h2 class="wow fadeInLeft animated">See Our Work</h2>
                 </div>
                 <div class="col-md-12 new-style">
-                    <p class="wow fadeInLeft animated">The new Style for 2017 is here. Like it? <a href="#" class="secondary">BUY THEME
-                            NOW!</a></p>
+                    <p class="wow fadeInLeft animated" style="margin-bottom: 25px;">Click on and See More Details <a href="#">
+                            <span style="background-color: orangered; width: 150px; height: 35px;" class="btn">See More...</span>
+                        </a>
+                    </p>
                 </div>
                 <div class="col-md-12 portfolio-images">
                     @foreach($services as $service)
@@ -153,7 +157,7 @@
                 <div class="col-lg-12">
                     <div class="about-text">
                         <h2 class="wow fadeIn animated"><span>About</span> {!! $about->heading !!}</h2>
-                        <p class="wow fadeIn animated">{!! $about->description!!}.</p>
+                        <p class="wow fadeIn animated"><b style="color: #FFFFFF;">{!! $about->description!!}</b></p>
                         <!-- /.about-icons -->
 
                     </div>
@@ -164,7 +168,7 @@
                         <!-- /.image-left -->
 
                         <div class="mockup image-center">
-                            <img class="wow slideInUp animated" src="{!! asset('/frontend/') !!}/giphy.gif" style="margin-bottom: 20px;" alt="ipad">
+                            <img class="wow slideInUp animated" src="{!! asset('/frontend/') !!}/giphy.gif" style="margin-bottom: 20px; height: 500px;" alt="ipad">
                         </div>
                         <!-- /.image-center -->
 
@@ -191,13 +195,14 @@
                 <div class="col-md-12 quote-headline">
                     <h4 class="wow fadeIn animated">We are here to <span>make things Better</span></h4>
                 </div>
+                <img src="{!! asset('/frontend/') !!}/affilation.jpg" width="100%" alt="affilation"/>
                 <div class="col-md-12 quote-bottom">
                     <div class="container">
                         <h3 class="wow fadeIn animated">
-                            "Patience, persistence and perspiration make an unbeatable combination for
+                            "Banglakings Software, persistence and perspiration make an unbeatable combination for
                             <span class="primary">success</span>."
                         </h3>
-                        <p class="wow fadeIn animated">NAPOLEON HILL<span> - Author</span></p>
+                        <p class="wow fadeIn animated">Banglakings Software<span> - Author</span></p>
                     </div>
                 </div>
             </div>
@@ -224,7 +229,9 @@
                         <div class="service wow fadeIn animated">
                             <div class="text">
                                 <a href="service-item-video-dark.html" class="primary-hover">Website Development</a>
-                                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Integer nec odio.</p>
+                                <p>
+                                    Bangla Kings expertise in a full service innovative Website Design and Development company based in Dhaka, Bangladesh
+                                </p>
                             </div>
                             <div class="icons">
                                 <i class="material-icons primary">devices</i>
@@ -233,7 +240,7 @@
                         <div class="service wow fadeIn animated">
                             <div class="text">
                                 <a href="service-item-video-dark.html" class="primary-hover">Software Development</a>
-                                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Integer nec odio.</p>
+                                <p>We offer readymade and Customizable Responsive Web based Software and Offline software.</p>
                             </div>
                             <div class="icons">
                                 <img src="{!! asset('/frontend/') !!}/assets/images/2019-03-31 (2).png" height="50" width="40"/>
@@ -242,7 +249,8 @@
                         <div class="service wow fadeIn animated">
                             <div class="text">
                                 <a href="service-item-video-dark.html" class="primary-hover">Mobile Application</a>
-                                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Integer nec odio.</p>
+                                <p>Bangla Kings Offers Mobile
+                                    ( iPhone, iPad & Android ) Apps Development Services for both smartphones and tablets.</p>
                             </div>
                             <div class="icons">
                                 <img src="{!! asset('/frontend/') !!}/assets/images/2019-03-31.png" height="50" width="30"/>
@@ -259,7 +267,7 @@
                             </div>
                             <div class="text">
                                 <a href="service-item-video-dark.html" class="primary-hover">Domain & Hosting</a>
-                                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Integer nec odio.</p>
+                                <p>We provide domain registration with web hosting services ensuring high server uptime with superb support.</p>
                             </div>
                         </div>
                         <div class="service-2 wow fadeIn animated">
@@ -268,7 +276,7 @@
                             </div>
                             <div class="text">
                                 <a href="service-item-video-dark.html" class="primary-hover">Digital Marketing</a>
-                                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Integer nec odio.</p>
+                                <p>We provide Digital Marketing services. Like As Facebook,YouTube, Gmail,Yahoo,Twitter,Google, Adwords,SMS,etc Marketing</p>
                             </div>
                         </div>
                         <div class="service-2 wow fadeIn animated">
@@ -277,7 +285,7 @@
                             </div>
                             <div class="text">
                                 <a href="service-item-video-dark.html" class="primary-hover">Digital Electronic</a>
-                                <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Integer nec odio.</p>
+                                <p>We sale Digital Electronics Products. Like as Full Set POS Machine,CC Camera, Finger Print Attendance Machin, Etc.</p>
                             </div>
                         </div>
                     </div>
@@ -295,11 +303,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="wow fadeIn animated">Like what You see? <span>Get Particle</span> Now!</h3>
-                    <p class="wow fadeIn animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-                        odio. Praesent libero. Sed
-                        cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-                        Praesent mauris.</p>
+                    <h3 class="wow fadeIn animated">Like what You see? <span>Get Banglakings</span> Now!</h3>
+                    <p class="wow fadeIn animated">We are Banglakings Software Ltd any kind of IT Service and Solution You do here.</p>
                     <button class="btn btn-default wow fadeInRight hvr-sweep-to-right button-gradient animated">Get it Now</button>
                 </div>
             </div>
@@ -315,20 +320,30 @@
                 <div class="col-md-12">
                     <div class="skills-headline">
                         <h4 class="wow fadeIn animated">Let <span>Our Skills</span> speak for Us</h4>
-                        <p class="wow fadeIn animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-                            odio. Praesent libero. Sed
-                            cursus ante dapibus diam.</p>
+                        <p class="wow fadeIn animated">
+                            Software Development has been one of the most popular career trends since years.
+                            The reason behind this is the fact that software are being used almost everywhere today.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-12 progress-bar-wrapper">
                     <div class="progress-bars">
                         <div class="bar-wrapper">
-                            <div class="col-md-3 col-sm-3 col-xs-4 wow fadeIn animated">Adobe creative cloud</div>
+                            <div class="col-md-3 col-sm-3 col-xs-4 wow fadeIn animated" style="margin-bottom: 30px;">Codeignator</div>
                             <div class="col-md-8 col-sm-8 col-xs-7">
                                 <div class="progressBar skill-bar-gradient wow animated first-bar"></div>
                             </div>
                             <div class="col-md-1 col-sm-1 col-xs-1">
-                                <span class="counter">75</span><span>%</span>
+                                <span class="counter" style="font-size: 30px;">75</span><span>%</span>
+                            </div>
+                        </div>
+                        <div class="bar-wrapper">
+                            <div class="col-md-3 col-sm-3 col-xs-4 wow fadeIn animated">Laravel</div>
+                            <div class="col-md-8 col-sm-8 col-xs-7">
+                                <div class="progressBar skill-bar-gradient wow animated fourth-bar"></div>
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-1">
+                                <span class="counter" style="font-size: 30px;">70</span><span>%</span>
                             </div>
                         </div>
                         <div class="bar-wrapper">
@@ -337,25 +352,17 @@
                                 <div class="progressBar skill-bar-gradient wow animated second-bar"></div>
                             </div>
                             <div class="col-md-1 col-sm-1 col-xs-1">
-                                <span class="counter">80</span><span>%</span>
+                                <span class="counter" style="font-size: 30px;">80</span><span>%</span>
                             </div>
                         </div>
+
                         <div class="bar-wrapper">
-                            <div class="col-md-3 col-sm-3 col-xs-4 wow fadeIn animated">Laravel</div>
-                            <div class="col-md-8 col-sm-8 col-xs-7">
-                                <div class="progressBar skill-bar-gradient wow animated third-bar"></div>
-                            </div>
-                            <div class="col-md-1 col-sm-1 col-xs-1">
-                                <span class="counter">50</span><span>%</span>
-                            </div>
-                        </div>
-                        <div class="bar-wrapper">
-                            <div class="col-md-3 col-sm-3 col-xs-4 wow fadeIn animated">GRAPHIC DESIGN</div>
+                            <div class="col-md-3 col-sm-3 col-xs-4 wow fadeIn animated">Android Apps</div>
                             <div class="col-md-8 col-sm-8 col-xs-7">
                                 <div class="progressBar skill-bar-gradient wow animated fourth-bar"></div>
                             </div>
                             <div class="col-md-1 col-sm-1 col-xs-1">
-                                <span class="counter">70</span><span>%</span>
+                                <span class="counter" style="font-size: 30px;">65</span><span>%</span>
                             </div>
                         </div>
                         <div class="bar-wrapper">
@@ -364,7 +371,7 @@
                                 <div class="progressBar skill-bar-gradient wow animated fifth-bar"></div>
                             </div>
                             <div class="col-md-1 col-sm-1 col-xs-1">
-                                <span class="counter">59</span><span>%</span>
+                                <span class="counter" style="font-size: 30px;">59</span><span>%</span>
                             </div>
                         </div>
                     </div>
@@ -400,41 +407,41 @@
                     <div class="contact-headline">
                         <h3 class="wow fadeIn animated">Let's <span>Connect</span></h3>
                     </div>
-                    <div class="contact-content">
+                    <div class="contact-content" >
                         @foreach($contact_us as $contact)
-                            <div class="contact-info">
+                            <div class="contact-info" style="height: auto;">
                                 <p class="contact-header">Our office <span>info</span></p>
                                 <div class="info-line">
-                                    <div class="info-icon wow fadeIn animated">
+                                    <div class="info-icon wow fadeIn animated col-md-2">
                                         <i class="fa fa-envelope-o primary" aria-hidden="true"></i>
                                     </div>
-                                    <div class="info-text wow fadeIn animated">
+                                    <div class="info-text wow fadeIn animated col-md-10">
                                         <p>{!! $contact->email !!}</p>
                                     </div>
                                 </div>
                                 <div class="info-line">
-                                    <div class="info-icon wow fadeIn animated">
+                                    <div class="info-icon wow fadeIn animated col-md-2">
                                         <i class="fa fa-phone primary" aria-hidden="true"></i>
                                     </div>
-                                    <div class="info-text wow fadeIn animated">
+                                    <div class="info-text wow fadeIn animated col-md-10">
                                         <p>{!! $contact->phone !!}</p>
                                     </div>
                                 </div>
 
                                 <div class="info-line">
-                                    <div class="info-icon wow fadeIn animated">
+                                    <div class="info-icon wow fadeIn animated col-md-2" style="margin-top: 15px;">
                                         <i class="fa fa-address-card-o primary" aria-hidden="true"></i>
                                     </div>
-                                    <div class="info-text wow fadeIn animated">
+                                    <div class="info-text wow fadeIn animated col-md-10">
                                         <p>{!! $contact->street !!}</p>
                                     </div>
                                 </div>
 
                                 <div class="info-line">
-                                    <div class="info-icon wow fadeIn animated">
+                                    <div class="info-icon wow fadeIn animated col-md-2">
                                         <i class="fa fa-map-marker primary" aria-hidden="true"></i>
                                     </div>
-                                    <div class="info-text wow fadeIn animated">
+                                    <div class="info-text wow fadeIn animated col-md-10">
                                         <p>{!! $contact->location !!}</p>
                                     </div>
                                 </div>
@@ -470,7 +477,8 @@
                         <div class="contact-form">
                             <h4 class="wow fadeIn animated">Send us a <span>Message</span></h4>
 
-                            <form method="post">
+                            <form action="{!! url('/send-mail') !!}" method="post" id="fornt-mail">
+                                @csrf
                                 <div class="form-group wow fadeIn animated">
                                     <label for="name">Name: </label>
                                     <input type="text" id="name" name="name" class="form-control">
@@ -499,7 +507,7 @@
     </section>
     <!-- /.contact-section -->
     <footer>
-        <p>All Right Reserved © 2017 -<a href="http://www.skilltechwebdesign.com/" class="primary-hover"> Banglaking</a></p>
+        <p>All Right Reserved © 2017 -<a href="http://www.skilltechwebdesign.com/" class="primary-hover"> Banglakings Software ltd</a></p>
     </footer>
     <!-- Footer
 

@@ -27,6 +27,21 @@
             <span>Portfolio</span></a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{{ url('/notice') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Notice</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/category') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Category</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/product') }}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Product</span></a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{!! url('/team') !!}">
             <i class="fas fa-fw fa-table"></i>
             <span>Team</span></a>

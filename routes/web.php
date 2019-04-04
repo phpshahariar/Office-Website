@@ -10,9 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//**forntend content
 Route::get('/', 'FrontendController@index');
 
+Route::post('/send-mail', 'FrontendController@sent_mail');
+
+//**forntend content end**//
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -60,3 +63,37 @@ Route::get('/delete-work/{id}', 'WorkController@delete_work');
 
 Route::get('/contact', 'WorkController@contact_us');
 Route::post('/contact-save', 'WorkController@contact_save');
+Route::get('/published/{id}', 'WorkController@contact_published');
+Route::get('/unpublished/{id}', 'WorkController@contact_unpublished');
+Route::get('/edit-contact/{id}', 'WorkController@contact_edit');
+Route::post('/contact-update', 'WorkController@contact_update');
+Route::get('/delete-contact/{id}', 'WorkController@contact_delete');
+
+
+
+Route::get('/demo', 'PortfolioController@index_portfolio');
+//backend product
+Route::get('/product', 'PortfolioController@index_product');
+Route::get('/product-category/{id}', 'PortfolioController@category_product');
+Route::post('/save-product', 'PortfolioController@save_product');
+Route::get('/published-product/{id}', 'PortfolioController@published_product');
+Route::get('/unpublished-product/{id}', 'PortfolioController@unpublished_product');
+Route::get('/edit-product/{id}', 'PortfolioController@edit_product');
+Route::post('/update-product', 'PortfolioController@update_product');
+Route::get('/delete-product/{id}', 'PortfolioController@delete_product');
+
+//Product-details
+
+Route::get('/product-details/{id}', 'PortfolioController@details_product');
+
+
+//Category
+Route::get('/category', 'CategoryController@add_category');
+Route::post('/new-category', 'CategoryController@save_category');
+Route::get('/published-category/{id}', 'CategoryController@published_category');
+Route::get('/unpublished-category/{id}', 'CategoryController@unpublished_category');
+Route::get('/edit-category/{id}', 'CategoryController@edit_category');
+Route::post('/update-category', 'CategoryController@update_category');
+Route::get('/delete-category/{id}', 'CategoryController@delete_category');
+
+

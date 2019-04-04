@@ -114,18 +114,18 @@
                                 <td>{!! $contact->publication_status ==1 ? 'Published' : 'Unpublished'!!}</td>
                                 <td style="width: 130px;">
                                     @if($contact->publication_status == 1)
-                                        <a href="" name="btn" class="btn btn-outline-success" title="Published">
+                                        <a href="{!! url('/published/'.$contact->id) !!}" name="btn" class="btn btn-outline-success" title="Published">
                                             <i class="far fa-arrow-alt-circle-up"></i>
                                         </a>
                                     @else
-                                        <a href="" name="btn" class="btn btn-outline-warning" title="Unpublished">
+                                        <a href="{!! url('/unpublished/'.$contact->id) !!}" name="btn" class="btn btn-outline-warning" title="Unpublished">
                                             <i class="far fa-arrow-alt-circle-down"></i>
                                         </a>
                                     @endif
-                                    <a href="" name="btn" class="btn btn-outline-info" title="Edit">
+                                    <a href="{!! url('/edit-contact/'.$contact->id) !!}" name="btn" class="btn btn-outline-info" title="Edit">
                                         <i class="far fa-edit"></i>
                                     </a>
-                                    <a href="" name="btn" class="btn btn-outline-danger" onclick="return confirm('Are You Sure! Delete About Information?');" title="Delete">
+                                    <a href="{!! url('/delete-contact/'.$contact->id) !!}" name="btn" class="btn btn-outline-danger" onclick="return confirm('Are You Sure! Delete Contact Information?');" title="Delete">
                                         <i class="fas fa-trash-alt"></i>
                                     </a>
                                 </td>

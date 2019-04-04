@@ -96,5 +96,42 @@ class WorkController extends Controller
         return redirect()->back()->with('message', 'Contact Information Save');
     }
 
+    public function contact_published($id){
+        $published_contact = Contact::find($id);
+        $published_contact->publication_status =0;
+        $published_contact->save();
+        return redirect()->back()->with('message', 'Contact Information Unpublished Successfully');
+    }
+
+    public function contact_unpublished($id){
+        $unpublished_contact = Contact::find($id);
+        $unpublished_contact->publication_status =1;
+        $unpublished_contact->save();
+        return redirect()->back()->with('message', 'Contact Information Published Successfully');
+    }
+
+    public function contact_edit($id){
+        $edit_contact = Contact::find($id);
+        return view('backend.contact.edit-contact', compact('edit_contact'));
+    }
+
+    public function contact_update(Request $request){
+        $update_contact = Contact::find($request->id);
+
+        $update_contact->email = $request->email;
+        $update_contact->phone = $request->phone;
+        $update_contact->street = $request->street;
+        $update_contact->location = $request->location;
+        $update_contact->publication_status = $request->publication_status;
+        $update_contact->save();
+        return redirect('/contact')->with('message', 'Contact Information Updated');
+    }
+
+    public function contact_delete($id){
+        $delete_contact = Contact::find($id);
+        $delete_contact->delete();
+        return redirect()->back()->with('delete', 'Contact Information Deleted');
+    }
+
 
 }
